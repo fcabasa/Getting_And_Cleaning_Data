@@ -10,6 +10,8 @@
 ## Here are the data for the project:
 
 ##  https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+##  In R, use the download.file function:
+##  download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", "./Smartphones.zip")
 
 ## You should create one R script called run_analysis.R that does the following:
 
@@ -24,7 +26,6 @@ require(plyr)
 #**********************
 # Step 0: Load raw data
 #**********************
-download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", "./Smartphones.zip")
 
 features <- read.table("features.txt", colClasses = c("character"))
 activity_labels <- read.table("activity_labels.txt", col.names = c("ActivityId", "Activity"))
