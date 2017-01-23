@@ -11,7 +11,10 @@ Raw data collection
   that was used by the original collectors to conduct experiments exploiting
   Support Vector Machine (SVM).  Please refer to the README for download link.
     
-  The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48        years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING,      STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded             accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a    constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained   dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for         generating the training data and 30% the test data. 
+  The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48     years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING,   STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded   
+  accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at   a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The   
+  obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was   
+  selected for generating the training data and 30% the test data. 
   
   For each record it is provided:
 
@@ -23,7 +26,7 @@ Raw data collection
 
 ### Signals
   
-  The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then    sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor      acceleration signal, which has gravitational and body motion components, was separated using a            Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to     have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each   window, a vector of features was obtained by calculating variables from the time and frequency domain.  
+  The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a  Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.  
     
   The set of variables that were estimated from these signals are:
 
@@ -80,13 +83,17 @@ Labels given from the original collectors were changed:
     
 From the intermediate data set is created a final tidy data set where numeric
 variables are averaged for each activity and each subject.
+
+The intermediate data set (all_data_mean_std.txt) contains 10299 observations with 81 variables accounting for only those variables which capture mean or standard deviation and all of the
+individual observations for the 30 subjects across six activities.
     
-The tidy data set contains 10299 observations with 81 variables divided in:
+The final tidy data set contains 180 observations with 81 variables divided in:
     
-*  an activity label (__Activity__): WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+*  an activity label for the six activities (__Activity__): WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
 *  an identifier of the subject who carried out the experiment (__Subject__):
-    1, 3, 5, 6, 7, 8, 11, 14, 15, 16, 17, 19, 21, 22, 23, 25, 26, 27, 28, 29, 30
-*  a 79-feature vector with time and frequency domain signal variables (numeric)
+   ranging from 1 to 30
+*  a 79-feature vector with time and frequency domain signal variables (numeric) for those
+  variables which capture mean or standard deviation
     
 The following table relates the 17 signals to the names used as prefix for the
 variables names present in the data set. ".XYZ" denotes three variables, one for each axis.
@@ -107,5 +114,5 @@ Body Angular Acceleration Magnitude   | TimeDomain.BodyAngularAccelerationMagnit
 For variables derived from mean and standard deviation estimation, the previous labels
 are augmented with the terms "Mean" or "StandardDeviation".
     
-The data set is written to the file all_data_avg_by_act_sub.txt.
+The final tidy data set is written to the file all_data_avg_by_act_sub.txt.
     
