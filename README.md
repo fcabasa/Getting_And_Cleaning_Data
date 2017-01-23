@@ -15,8 +15,8 @@ You should create one R script called run_analysis.R that does the following.
 1. Download the data source and put into a folder on your local drive. The file can be downloaded from this location:  https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 You'll have a ```UCI HAR Dataset``` folder created after you unzip the downloaded file.
 2. Put ```run_analysis.R``` in the parent folder of ```UCI HAR Dataset```, then set it as your working directory using ```setwd()``` function in RStudio.
-3. Run ```source("run_analysis.R")```, then it will generate a new file ```all_data_avg_by_act_sub``` in your working directory.
+3. Run ```source("Run_Analysis.R")```, then it will generate a new file ```all_data_avg_by_act_sub``` in your working directory.
 
 ## Dependencies
 
-```run_analysis.R``` file will help you to install the dependencies automatically. It depends on ```plyr``` and ```data.table```. 
+```Run_Analysis.R``` file will help you to install the dependencies automatically. It depends on ```plyr``` and ```data.table```. 
