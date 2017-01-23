@@ -12,7 +12,8 @@ You should create one R script called run_analysis.R that does the following.
 
 ## Steps to work on this course project
 
-1. Download the data source and put into a folder on your local drive. You'll have a ```UCI HAR Dataset``` folder.
+1. Download the data source and put into a folder on your local drive. The file can be downloaded from this location:  https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+You'll have a ```UCI HAR Dataset``` folder.
 2. Put ```run_analysis.R``` in the parent folder of ```UCI HAR Dataset```, then set it as your working directory using ```setwd()``` function in RStudio.
 3. Run ```source("run_analysis.R")```, then it will generate a new file ```all_data_avg_by_act_sub``` in your working directory.
 
